@@ -1309,8 +1309,8 @@
             <button class="ctrl-btn" onclick="skipSong(1)">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zm2-8.14 5.25 2.14L8 14.14V9.86zM16 6h2v12h-2z"/></svg>
             </button>
-            <audio id="bgMusic" loop>
-                <source src="musik/Tetap-Dalam-Jiwa.mp3" type="audio/mpeg">
+            <audio id="bgMusic" preload="auto" loop>
+                <source src="musik/tetap-dalam-jiwa.mp3" type="audio/mpeg">
             </audio>
           </div>
         </div>
@@ -1749,7 +1749,12 @@ let progress = 0;
 let timer = null;
 const totalSeconds = 237;
 const music = document.getElementById("bgMusic");
+music.volume = 0.4;
+let isProcessing = false;
+
 function togglePlay() {
+
+  if (isProcessing) return;
 
   const disc = document.getElementById('playerDisc');
   const icon = document.getElementById('playIcon');
@@ -1757,9 +1762,9 @@ function togglePlay() {
 
   if (music.paused) {
 
-    music.play().then(() => {
+    isProcessing = true;
 
-      isPlaying = true;
+    music.play().then(() => {
 
       disc.classList.add('playing');
 
@@ -1770,15 +1775,16 @@ function togglePlay() {
       startProgress();
       spawnNotes();
 
+      isProcessing = false;
+
     }).catch(err => {
       console.log("Audio gagal diputar:", err);
+      isProcessing = false;
     });
 
   } else {
 
     music.pause();
-
-    isPlaying = false;
 
     disc.classList.remove('playing');
 
