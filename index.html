@@ -459,7 +459,7 @@ footer::before{content:'';position:absolute;top:0;left:60px;right:60px;height:1p
         </div>
       </div>
       <!-- Audio element — letakkan file musik di folder yang sama dengan nama tetap-dalam-jiwa.mp3 -->
-      <audio id="bgMusic" preload="none" loop controls>
+      <audio id="bgMusic" preload="none" loop>
         <source src="musik/tetap-dalam-jiwa.mp3" type="audio/mpeg">
         <source src="tetap-dalam-jiwa.mp3" type="audio/mpeg">
       </audio>
@@ -1041,17 +1041,156 @@ window.addEventListener('scroll',()=>{
 // WHATSAPP CHAT
 // ══════════════════════════════════
 const chatMsgs=[
-  {type:'date',text:'Kemarin'},
-  {type:'in',text:'Hai, kamu lagi dengerin lagu apa malam ini? 🌙',time:'20:14'},
-  {type:'out',text:'Tetap Dalam Jiwa... entah kenapa lagunya selalu bisa bikin tenang',time:'20:17',status:'read'},
-  {type:'in',text:'Iya bener banget 🥺 Isyana memang tau cara berbicara ke hati',time:'20:19'},
-  {type:'out',text:'Kayak ada yang ngerti perasaan kita tanpa perlu ngomong ya',time:'20:21',status:'read'},
-  {type:'in',text:'Btw... aku mau bilang sesuatu 😊',time:'20:24'},
-  {type:'in',text:'Kamu itu kayak lagu favorit aku. Mau diputar berkali-kali pun nggak pernah bosen ✨',time:'20:25'},
-  {type:'out',text:'Astaga... ini yang paling indah yang pernah aku denger 🌸',time:'20:27',status:'read'},
-  {type:'out',text:'Kamu juga tahu nggak? Kamu itu seperti... melodi yang membuat dunia terasa lebih hangat 💛',time:'20:28',status:'read'},
-  {type:'in',text:'Semoga kita bisa terus saling menemani ya, seperti nada yang selalu kembali ke chord dasarnya 🎵',time:'20:31'},
+  {type:'date',text:'27 November 2025'},
+
+  {type:'out',text:'bingung, kk gak suka gantung orang, tp kk dah mau tamat juga ntar lagi juga pkl',time:'23:33',status:'read'},
+
+  {type:'in',text:'kaka mau mati kah?',time:'23:37'},
+  {type:'in',text:'😭',time:'23:37'},
+
+  {type:'out',text:'ahhh gak seru🙂‍↕️',time:'23:37',status:'read'},
+
+  {type:'in',text:'SERIUS',time:'23:38'},
+  {type:'in',text:'gantung orang gimana?',time:'23:38'},
+
+  {type:'out',text:'hm... you know i like you, and kk bingung, mau bawa hubungan yang lebih dari teman atau kayak sekarang aja',time:'23:40',status:'read'},
+
+  {type:'in',text:'up to u sii kakk',time:'23:47'},
+
+  {type:'out',text:'okeh deh.',time:'23:53',status:'read'},
+
+  {type:'out',text:'Yaps mungkin kk bukan orang terbaik, and bukan yang bisa selalu ada dan selalu memberi, tapi kk bisa berusaha dan terus berkembang, so unfriend, and be my girlfriend??',time:'23:57',status:'read',important:true},
+
+  {type:'in',text:'kak? sejak kapan bisa gini? 🤗',time:'23:57'},
+  {type:'in',text:'WKWKWKW ANJIRR, MAWWW',time:'23:57'},
+
+  {type:'out',text:'wkkwkw ko meremehkan penulis ulung🙂‍↕️ meski gak pernah nembak orang, yang curhat sama kk banyak juga🙂‍↕️ jadi bisalah wkwk',time:'23:59',status:'read'},
+
+  {type:'out',text:'yapsss saya tak bisa berkata kata 🙂‍↕️',time:'23:59',status:'read'},
+
+  {type:'out',text:'thanksss icaaa😁',time:'00:01',status:'read'},
+
+  {type:'in',text:'WKWKWKWK PLIS AK SYOK DIKIT',time:'00:01'},
+
+  {type:'date',text:'7 Maret 2026'},
+
+{type:'out',text:'keknya kk gak bisa tahan dan kk gak bisa jdi cowok yang sabar buat ngadapin masalah wkwk',time:'00:18',status:'read'},
+{type:'out',text:'ehh maaf caa',time:'00:18',status:'read'},
+{type:'out',text:'lanjut lah dulu',time:'00:18',status:'read'},
+{type:'out',text:'ntar kk jelasin',time:'00:18',status:'read'},
+
+{type:'in',text:'kan aku udah lupain si kak',time:'00:18'},
+{type:'in',text:'kalo kaka mau berantem sm org itu yauda',time:'00:18'},
+{type:'in',text:'aku ga ikut campur, walaupun grgr aku juga',time:'00:18'},
+
+{type:'out',text:'iyah kakak gak salahin ica buat itu, and kk juga udah nyoba lupain itu semua. tapi kk mikir masa depan, keknya kalau kita lanjut pasti selalu kek gini juga ujungnya.',time:'00:23',status:'read'},
+{type:'out',text:'sumpah kk gak salahin ica sama sekali, tapi kalau orang di sekitar dan orang yang paling bisa ica percaya aja udah muak sama hubungan kita, kayaknya bakal nyiksa ica banget dan kk juga.',time:'00:23',status:'read'},
+{type:'out',text:'jadi lebih baik kk yang mundur aja, kk ikutin apa yang mereka mau.',time:'00:23',status:'read'},
+{type:'out',text:'setidaknya dengan ngelepas ica gini, ica dan kk ga perlu sakit hati lagi, mereka juga gak perlu marah marah lagi.',time:'00:23',status:'read'},
+
+{type:'in',text:'kaka bilang pas aku mikir kawan kk gasuka aku, hubungan kita bukan urusan yang lain, kita yg jalani',time:'00:24'},
+{type:'in',text:'kan aku udh ga sakit hati lagi',time:'00:25'},
+{type:'in',text:'lagian kan aku udh gada chatan org itu lg',time:'00:25'},
+
+{type:'out',text:'iyahh kemaren kk bilang gitu, tapi setelah kk mikir lagi manusia gak bisa hidup berdua doang. pasti ica butuh mereka juga.',time:'00:27',status:'read'},
+{type:'out',text:'kalau mereka gak mau sama ica karena jenuh lihat kk gimana, kasian tau icanya.',time:'00:27',status:'read'},
+
+{type:'in',text:'aku masi punya mutek, kan kawan aku bkn mereka doang',time:'00:27'},
+
+{type:'out',text:'mutek juga lelah kan nengok kk',time:'00:28',status:'read'},
+
+{type:'in',text:'ngga',time:'00:28'},
+{type:'in',text:'kalo dia lelah, ngapai dia ttp mau ketemu kk',time:'00:28'},
+
+{type:'out',text:'pokoknya caa keputusan kk dah bulat, kk gak mau di antara kita ada sakit hati yang lebih dalam lagi. kita akhirin di sini yahh.',time:'00:29',status:'read'},
+
+{type:'in',text:'aku gada sakit hati loh?',time:'00:29'},
+{type:'in',text:'kaka sakit hati?',time:'00:29'},
+{type:'in',text:'ch kaka yg baru aja aku gada sakit hati',time:'00:29'},
+
+{type:'out',text:'iyah kakak sakit hati sama mereka apalagi setelah lihat chat mereka.',time:'00:31',status:'read'},
+
+{type:'in',text:'tapi kan gada sangkut pautnya sama aku, aku gada nyuruh mereka maki kaka',time:'00:31'},
+{type:'in',text:'aku juga blg ke rajik kenapa dia yg benci ke kk',time:'00:32'},
+{type:'in',text:'kaka mau aku jauhi mereka?',time:'00:32'},
+
+{type:'out',text:'ini pelajaran aja buat ica kedepannya, kalau mau ceritakan masalah hubungan jangan sama yang modelan kayak mereka.',time:'00:32',status:'read'},
+{type:'out',text:'engga kk gak mau ica jauhin mereka.',time:'00:32',status:'read'},
+
+{type:'in',text:'kan aku gada ceritain lagi si kak, yg tadi aku cuma mau cari siapa yg kasi tau',time:'00:33'},
+{type:'in',text:'kita baru balikan loh',time:'00:33'},
+
+{type:'out',text:'iyah caa ica gak nyuruh, tapi mereka maki kk dan itu udah terjadi.',time:'00:33',status:'read'},
+{type:'out',text:'kk gak bilang ica cerita lagi kok.',time:'00:33',status:'read'},
+
+{type:'in',text:'trs kenapa imbas nya ke aku?',time:'00:33'},
+
+{type:'out',text:'bukan imbasnya ke ica, tapi kk tahu ujungnya kejadian kayak gini pasti keulang.',time:'00:34',status:'read'},
+{type:'out',text:'kk gak mau lagi, jujur kk gak sesabar itu lagi.',time:'00:34',status:'read'},
+
+{type:'in',text:'kan udh dibilang kl gbakal gt',time:'00:34'},
+{type:'in',text:'kaka emg ga percaya sm ku lagi ya',time:'00:35'},
+{type:'in',text:'yauda la',time:'00:35'},
+
+{type:'out',text:'kakak takut buat percaya lagi, bukan gak percaya.',time:'00:36',status:'read'},
+{type:'out',text:'selama kita pacaran gak pernah satu minggu pun bebas tanpa kesalahan.',time:'00:36',status:'read'},
+{type:'out',text:'jadi kayaknya emang cara pikir kita udah berbeda jauh ca.',time:'00:36',status:'read'},
+
+{type:'in',text:'kaka yang cari kesalahan, aku kan dari kemarin mau damai terus',time:'00:38'},
+{type:'in',text:'ada ga aku minta putus kayak dulu?',time:'00:38'},
+{type:'in',text:'berarti kaka udh ga percaya aku lagi',time:'00:38'},
+
+{type:'out',text:'iyah sekarang kk yang cari kesalahan memang, makanya kk minta putus.',time:'00:38',status:'read'},
+{type:'out',text:'bukan gak dianggap, kk udah nerima kok perubahan ica.',time:'00:38',status:'read'},
+
+{type:'out',text:'gak ada emang, dan kk makasih banyak buat itu.',time:'00:39',status:'read'},
+{type:'out',text:'tapi kali ini dan ini permintaan kk terakhir sama ica.',time:'00:39',status:'read'},
+{type:'out',text:'lupakan kakak, kita putus.',time:'00:39',status:'read'},
+
+{type:'out',text:'ica udah jadi yang terbaik di hati kk, kk gak mau itu hancur jadi kita pisah baik baik yah.',time:'00:40',status:'read'},
+
+{type:'in',text:'kenapa si harus putus',time:'00:40'},
+
+{type:'out',text:'supaya semua hal ini gak terulang caa, sesimpel itu aja.',time:'00:41',status:'read'},
+
+{type:'in',text:'kaka sepercaya itu buat terulang lagi kalau kita masih bertahan?',time:'00:41'},
+{type:'in',text:'aku sengaja beli nomor baru loh buat lost contact sama org itu',time:'00:42'},
+
+{type:'out',text:'iyah kakak percaya hal itu bisa terjadi lagi, susah buat kk jelasin.',time:'00:42',status:'read'},
+{type:'out',text:'syukurlah kalau ica mau lost contact sama mereka, tapi kk emang gak bisa bertahan lagi.',time:'00:42',status:'read'},
+
+{type:'in',text:'gbisa nyoba lagi?',time:'00:43'},
+{type:'in',text:'kan aku selalu lupain buat ga perpanjang masalah',time:'00:43'},
+
+{type:'out',text:'iyah ica, kakak gak bisa bertahan lagi. ica gak salah, kakak yang salah. maaf yah sayang.',time:'00:43',status:'read'},
+
+{type:'out',text:'kakak pasti doakan ica dapat cowok dan teman yang lebih baik.',time:'00:44',status:'read'},
+{type:'out',text:'tapi kakak gak bisa ada di antara itu karena kk bukan cowok baik.',time:'00:45',status:'read'},
+
+{type:'in',text:'kaka baik loh',time:'00:45'},
+{type:'in',text:'kalau ga baik ga mungkin aku masih nerima balikan kemarin',time:'00:45'},
+
+{type:'out',text:'mungkin di mata ica kakak baik, tapi gak di mata kk sendiri.',time:'00:46',status:'read'},
+
+{type:'in',text:'ya itu kan di mata kaka sendiri',time:'00:46'},
+
+{type:'out',text:'kk emang gak bisa bertahan lagi caa, kakak akui ica bisa berubah tapi kk udah gak bisa lagi.',time:'00:47',status:'read'},
+
+{type:'in',text:'kaka ga inget tulisan aku di notebook?',time:'00:48'},
+
+{type:'out',text:'kk ingat dan kk selalu bawa notebook itu kemana mana.',time:'00:48',status:'read'},
+
+{type:'in',text:'jadi maksud aku nulis kayak gitu apa coba',time:'00:49'},
+
+{type:'out',text:'makasih banyak buat semua yang kita lalui bersama, jujur itu yang terbaik yang pernah kakak alami.',time:'00:51',status:'read'},
+
+{type:'in',text:'aku berusaha loh buat ga nyakitin perasaan kk.',time:'00:51'},
+{type:'in',text:'aku juga ga nyuruh kk jauhin kawan kk.',time:'00:52'},
+{type:'in',text:'terus janji janji kemarin gimana',time:'00:52'},
+
+{type:'in',text:'yauda la, i hope u find a better girl',time:'00:53', final:true}
 ];
+
 let msgIdx=0, chatStarted=false;
 const waBody=document.getElementById('waBody');
 
@@ -1204,3 +1343,4 @@ window.addEventListener('load',()=>{
 </script>
 </body>
 </html>
+
