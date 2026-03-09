@@ -346,6 +346,9 @@
   .divider-ornament::after { transform: rotate(45deg) translate(8px, 0); }
 
   /* MUSIC SECTION */
+  audio {
+    display: none;
+  }
   #musik {
     padding: 100px 60px;
     background: linear-gradient(180deg, var(--cream-light) 0%, var(--cream) 100%);
@@ -1297,7 +1300,7 @@
           </div>
           <div class="time-display">
             <span id="currentTime">0:00</span>
-            <span>4:02</span>
+            <span>3:57</span>
           </div>
           <div class="player-controls">
             <button class="ctrl-btn" onclick="skipSong(-1)">
@@ -1309,6 +1312,9 @@
             <button class="ctrl-btn" onclick="skipSong(1)">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zm2-8.14 5.25 2.14L8 14.14V9.86zM16 6h2v12h-2z"/></svg>
             </button>
+            <audio id="bgMusic" loop>
+                <source src="musik/Tetap-Dalam-Jiwa.mp3" type="audio/mpeg">
+            </audio>
           </div>
         </div>
       </div>
@@ -1744,7 +1750,8 @@ heights.forEach((h, i) => {
 let isPlaying = false;
 let progress = 0;
 let timer = null;
-const totalSeconds = 242;
+const totalSeconds = 237;
+const music = document.getElementById("bgMusic");
 
 function togglePlay() {
   isPlaying = !isPlaying;
@@ -1753,12 +1760,14 @@ function togglePlay() {
   const bars = document.querySelectorAll('.wave-bar');
 
   if (isPlaying) {
+    music.play();
     disc.classList.add('playing');
     icon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
     bars.forEach(b => b.style.animationPlayState = 'running');
     startProgress();
     spawnNotes();
   } else {
+    music.pause();
     disc.classList.remove('playing');
     icon.innerHTML = '<path d="M8 5v14l11-7z"/>';
     bars.forEach(b => b.style.animationPlayState = 'paused');
