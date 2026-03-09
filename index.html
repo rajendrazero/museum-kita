@@ -346,9 +346,6 @@
   .divider-ornament::after { transform: rotate(45deg) translate(8px, 0); }
 
   /* MUSIC SECTION */
-  audio {
-    
-  }
   #musik {
     padding: 100px 60px;
     background: linear-gradient(180deg, var(--cream-light) 0%, var(--cream) 100%);
@@ -1752,27 +1749,49 @@ let progress = 0;
 let timer = null;
 const totalSeconds = 237;
 const music = document.getElementById("bgMusic");
-
 function togglePlay() {
-  isPlaying = !isPlaying;
+
   const disc = document.getElementById('playerDisc');
   const icon = document.getElementById('playIcon');
   const bars = document.querySelectorAll('.wave-bar');
 
-  if (isPlaying) {
-    music.play();
-    disc.classList.add('playing');
-    icon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
-    bars.forEach(b => b.style.animationPlayState = 'running');
-    startProgress();
-    spawnNotes();
+  if (music.paused) {
+
+    music.play().then(() => {
+
+      isPlaying = true;
+
+      disc.classList.add('playing');
+
+      icon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+
+      bars.forEach(b => b.style.animationPlayState = 'running');
+
+      startProgress();
+      spawnNotes();
+
+    }).catch(err => {
+      console.log("Audio gagal diputar:", err);
+    });
+
   } else {
+
     music.pause();
+
+    isPlaying = false;
+
     disc.classList.remove('playing');
+
     icon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+
     bars.forEach(b => b.style.animationPlayState = 'paused');
-    clearInterval(timer);
+
+    if (typeof timer !== "undefined") {
+      clearInterval(timer);
+    }
+
   }
+
 }
 
 function startProgress() {
